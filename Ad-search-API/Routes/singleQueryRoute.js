@@ -5,7 +5,7 @@ const Ad = require("../Modal/adModal");
 router.get("/api/V8/companyAds" , async (req, res)=>{
     try{
         const searchItem = req.query.searchItem
-        const regEx = new RegExp(searchItem , 'i')
+        const regEx = new RegExp(searchItem , 'i') // for checking both upper and lower case words
         // return res.status(200).send(searchItem)
         const ads = await Ad.aggregate([
             {
