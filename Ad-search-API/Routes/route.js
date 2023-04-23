@@ -4,7 +4,7 @@ const Ad = require("../Modal/adModal");
 
 //Add companys in db
 
-router.post("/api/addCompany" , async (req , res)=>{
+router.post("/api/V8/addCompany" , async (req , res)=>{
 
     try{
         const {name , url} = req.body
@@ -28,7 +28,7 @@ router.post("/api/addCompany" , async (req , res)=>{
 
 //Get All Companies
 
-router.get("/api/companies" , async (req , res)=>{
+router.get("/api/V8/companies" , async (req , res)=>{
 
     try{
         const companies = await Company.find() 
@@ -46,7 +46,7 @@ router.get("/api/companies" , async (req , res)=>{
 
 //Add new company's Ad
 
-router.post("/api/addAd" , async (req , res)=>{
+router.post("/api/V8/addAd" , async (req , res)=>{
 
     try{
         const {companyId,primaryText , headline,description,CTA,image} = req.body
@@ -74,7 +74,7 @@ router.post("/api/addAd" , async (req , res)=>{
 
 // get all ads
 
-router.get("/api/ads" , async (req , res)=>{
+router.get("/api/V8/ads" , async (req , res)=>{
 
     try{
         const ads = await Ad.find() 

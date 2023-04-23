@@ -2,7 +2,7 @@ const router = require("express").Router()
 const Company = require("../Modal/companyModal");
 const Ad = require("../Modal/adModal");
 
-router.get("/api/companyAds" , async (req, res)=>{
+router.get("/api/V8/companyAds" , async (req, res)=>{
     try{
         const searchItem = req.query.searchItem
         const regEx = new RegExp(searchItem , 'i')
